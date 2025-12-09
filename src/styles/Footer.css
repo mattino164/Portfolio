@@ -1,0 +1,32 @@
+/* Footer container with vertical padding and white text */
+.footer-container {
+  padding: 2rem 0;
+  color: white;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+/* Footer copyright text */
+.footer-text {
+  font-size: 1rem;
+  color: #e2e8f0;
+  margin-bottom: 1rem;
+}
+
+/* Social icons layout: center and space between */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Icon color and hover animation */
+.social-icons a {
+  color: #e2e8f0;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #f56565;
+}

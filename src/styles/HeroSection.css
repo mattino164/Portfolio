@@ -1,0 +1,51 @@
+/* Container for the entire hero section, centers text and adds vertical spacing */
+.hero-section {
+  text-align: center;
+  margin: 5rem 0;
+}
+
+/* Main heading styling: large font, bold, and compact line height */
+.hero-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+/* Adjusts spacing for the subheading (name) inside the <p> */
+.hero-heading p {
+  margin: 0.5rem 0 0;
+}
+
+/* Highlights a specific part of the text (the last name) in red */
+.highlight {
+  color: #ef233c;
+}
+
+/* Descriptive paragraph beneath the heading */
+.hero-description {
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  color: white;
+}
+
+/* Container for call-to-action button, gives it space from the text */
+.hero-actions {
+  margin-top: 2rem;
+}
+
+/* Styling for the 'Contact Me' button */
+.contact-button {
+  background-color: #ef233c;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Hover effect for the button — slightly lighter red */
+.contact-button:hover {
+  background-color: #e25f6f;
+}

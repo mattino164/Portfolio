@@ -1,0 +1,113 @@
+/* Main container for the About section */
+.about-section {
+  /* background-color: #1c1c1c; */
+  padding: 3rem 1rem;
+  border-radius: 12px;
+  max-width: 1080px;
+  margin: 0 auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  font-family: Arial, sans-serif;
+}
+
+/* Inner box for About content */
+.about-box {
+  background-color: rgba(28, 28, 28, 0.8);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+}
+
+/* Styles for all h2 headers inside About section */
+.about h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+/* Custom class to color the About Me title */
+.about-title {
+  color: #ef233c;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Paragraph styling within About section */
+.about-box p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #f0f0f0;
+}
+
+/* Skills section wrapper */
+.skills-section {
+  text-align: center;
+  background-color: rgba(28, 28, 28, 0.8);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+/* Styles for h3 headers inside skills section */
+.skills-section h3 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-align: center;
+  color: #ef233c;
+}
+
+/* Grid container for skills, responsive columns */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 2rem;
+}
+
+/* Skill boxes */
+.skill-item-box {
+  background-color: rgba(51, 51, 51, 0.7);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.skill-item-box:hover {
+  transform: scale(1.05) translateY(-4px);
+  transition: transform 0.2s ease;
+}
+
+/* Fixed size for each skill logo image with spacing below */
+.skill-item-box img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 8px;
+}
+
+/* Skill name styling */
+.skill-name {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+/* Outer progress bar container with rounded corners */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #fefefa;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+/* Inner progress bar fill, color and smooth width transition */
+.progress-fill {
+  height: 100%;
+  background-color: #ef233c;
+  border-radius: 9999px;
+  width: 0%; /* Default width, overridden inline via React style */
+  transition: width 0.5s ease; /* Animate width changes */
+}

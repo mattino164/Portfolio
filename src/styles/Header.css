@@ -1,0 +1,180 @@
+/* Main header container layout */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  position: relative;
+  z-index: 20;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Left side of the header (logo/name) */
+.header-left {
+  flex: 1;
+}
+
+/* Logo/name styling */
+.nameHighlight {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ef233c; /* Bold red */
+}
+
+/* Default: hide desktop nav menu */
+.nav-desktop {
+  display: none;
+}
+
+/* Right side of the header (Let's Talk button), hidden by default */
+.header-right {
+  flex: 1;
+  display: none;
+  justify-content: flex-end;
+}
+
+/* Desktop styles: 769px and up */
+@media (min-width: 769px) {
+  /* Show and center the nav in desktop view */
+  .nav-desktop {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    flex: 2;
+  }
+
+  /* Nav links default styling */
+  .nav-desktop a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  /* Nav link hover effect (red + underline) */
+  .nav-desktop a:hover {
+    color: #ef233c;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+  }
+
+  /* Show the right side CTA button on desktop */
+  .header-right {
+    display: flex;
+  }
+
+  /* "Let's Talk" button styling (desktop) */
+  .talk-button {
+    background-color: #ef233c;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+
+  /* More noticeable hover color for the button */
+  .talk-button:hover {
+    background-color: #ff4d68; /* lighter red */
+  }
+
+  /* Hide hamburger on desktop */
+  .hamburger {
+    display: none;
+  }
+}
+
+/* Hamburger icon styles (mobile only) */
+.hamburger {
+  position: absolute;
+  right: 1.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  z-index: 150;
+}
+
+/* Overlay menu container (hidden by default) */
+.overlay-menu {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Fully off-screen initially */
+  width: 45%; /* Takes up 45% of the screen width */
+  height: 100vh;
+  background-color: #1e1e1e; /* Slate black */
+  transition: right 0.4s ease;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+}
+
+/* When menu is open, slide in */
+.overlay-menu.open {
+  right: 0;
+}
+
+/* Navigation links inside overlay */
+.overlay-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* Styling for links in overlay */
+.overlay-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+/* Hover effect for overlay links */
+.overlay-nav a:hover {
+  color: #ef233c;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+/* Reuse of talk-button in mobile nav */
+.talk-button {
+  background-color: #ef233c;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+/* Ensure hover stays visible on red background */
+.talk-button:hover {
+  background-color: #ff4d68;
+  color: white !important; /* Force white text */
+}
+
+/* Close (X) button in overlay menu */
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 101;
+}
+
+.close-button:hover {
+  color: #ef233c;
+  transform: scale(1.2);
+}
+
+/* Blur + dim background when menu is open */
+.blurred,
+.blurred * {
+  filter: blur(4px) brightness(0.6);
+  transition: filter 0.3s ease;
+}
